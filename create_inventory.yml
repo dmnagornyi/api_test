@@ -1,0 +1,14 @@
+---
+
+- name: api
+  hosts: localhost
+  become: yes
+  gather_facts: no
+  tasks:
+  
+  - ansible.controller.inventory:
+      name: "failed"
+      organization: "Default"
+      state: present
+      kind: smart
+      host_filter: "ansible_facts__test_fact=1"
