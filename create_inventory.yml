@@ -11,4 +11,4 @@
       organization: "Default"
       state: present
       kind: smart
-      host_filter: "ansible_facts__test_fact=1"
+      host_filter: 'ansible_facts__test_fact="1"'
