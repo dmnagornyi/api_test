@@ -7,9 +7,6 @@
   gather_facts: no
   tasks:
   
-  - shell: scl enable python27 bash
-    when: "'rhel6' in group_names"
-  
   - setup:
   
   - debug:
