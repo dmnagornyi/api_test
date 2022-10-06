@@ -4,7 +4,13 @@
 - name: facts
   hosts: all
   become: yes
-  gather_facts: yes
+  gather_facts: no
   tasks:
+  
+  - command: scl enable python27 bash
+    when: "'rhel6' in group_names"
+  
+  - setup:
+  
   - debug:
       msg: "OK"
